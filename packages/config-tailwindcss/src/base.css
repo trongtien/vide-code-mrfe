@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+/* Minimal Tailwind CSS v4+ base configuration */
+/* Use this for packages that need minimal styling */
+
+@theme {
+  --font-family-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-family-mono: ui-monospace, monospace;
+}

@@ -1,3 +1,5 @@
+# Type script styles
+* Never use barrel files.  Everything should simply required, no batch required
 ### ALL CHANGES
 * every time you make a change, YOU MUST lint, test, and build
 * if any lint appears, fix it before proceeding.
@@ -22,7 +24,7 @@ reportor=append-only
   * packages/editor-tsconfig/base.json - base compilerOptions shared by all projects. set strictest setting
   * packages/editor-tsconfig/react.json - extends base.json, add "jsx": "react-jsx". Used by all React a apps
   * for consuming
-    * Add "editor-tsconfig": "workspace:*" to the consumer's devDependencies
+    * Add "editor-tsconfig": "*" to the consumer's devDependencies
     * In the consumer's tsconfig.json:
 ```
 {
@@ -30,3 +32,10 @@ reportor=append-only
     include: ["src"]
 }
 ```
+
+* shared Tailwindcss for all packages and apps client side react or packages that use react
+  * The packages/config-tailwindcss packages provides share tailwindcss configurations for the entire monorepo
+  * Tailwindcss config using version 4+ 
+  * Add "config-tailwindcss": "*" to the consumer's devDependencies
+
+

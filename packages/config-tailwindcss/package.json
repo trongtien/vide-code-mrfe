@@ -1,0 +1,23 @@
+{
+  "name": "config-tailwindcss",
+  "version": "1.0.0",
+  "description": "Shared Tailwind CSS v4+ configuration for Zephyr monorepo",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.css",
+  "exports": {
+    ".": "./src/index.css",
+    "./base": "./src/base.css"
+  },
+  "files": [
+    "src"
+  ],
+  "peerDependencies": {
+    "tailwindcss": "^4.1.18"
+  },
+  "keywords": [
+    "tailwindcss",
+    "config",
+    "monorepo"
+  ]
+}

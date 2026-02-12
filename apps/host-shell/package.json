@@ -12,19 +12,22 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
     "@tanstack/react-router": "^1.159.5",
-    "@tanstack/router-devtools": "^1.159.5"
+    "@tanstack/router-devtools": "^1.159.5",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
   },
   "devDependencies": {
     "@rsbuild/core": "^1.7.3",
     "@rsbuild/plugin-react": "^1.4.5",
+    "@tailwindcss/postcss": "^4.1.18",
     "@tanstack/router-plugin": "^1.159.5",
     "@types/react": "^19.2.13",
     "@types/react-dom": "^19.2.3",
+    "config-tailwindcss": "*",
     "editor-tsconfig": "*",
     "oxlint": "^1.46.0",
+    "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3"
   }
 }

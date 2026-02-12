@@ -1,8 +1,10 @@
 import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
 import { TanStackRouterRspack } from '@tanstack/router-plugin/rspack';
+import tailwindcss from '@tailwindcss/postcss';
+import type { RsbuildConfig } from '@rsbuild/core';
 
-export default defineConfig({
+const config: RsbuildConfig = {
   plugins: [pluginReact()],
   html: {
     template: './index.html',
@@ -22,6 +24,13 @@ export default defineConfig({
     rspack: {
       plugins: [TanStackRouterRspack()],
     },
+    postcss: (opts) => {
+      opts.postcssOptions = {
+        plugins: [
+          tailwindcss(),
+        ],
+      };
+    },
   },
   server: {
     port: 3000,
@@ -30,5 +39,8 @@ export default defineConfig({
   },
   dev: {
     hmr: true,
+    liveReload: true,
   },
-});
+};
+
+export default defineConfig(config);

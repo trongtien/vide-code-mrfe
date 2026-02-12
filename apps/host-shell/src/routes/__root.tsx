@@ -1,18 +1,18 @@
 import { createRootRoute, Outlet } from '@tanstack/react-router';
 import { TanStackRouterDevtools } from '@tanstack/router-devtools';
+import { Header } from '../components/Header';
+import { ThemeProvider } from '../components/ThemeProvider';
 
 export const Route = createRootRoute({
   component: () => (
-    <>
-      <div>
-        <nav style={{ padding: '1rem', borderBottom: '1px solid #ccc' }}>
-          <h1>Zephyr Host Shell</h1>
-        </nav>
-        <main style={{ padding: '1rem' }}>
+    <ThemeProvider>
+      <div className="min-h-screen bg-background text-text">
+        <Header />
+        <main className="p-4">
           <Outlet />
         </main>
       </div>
       <TanStackRouterDevtools />
-    </>
+    </ThemeProvider>
   ),
 });
