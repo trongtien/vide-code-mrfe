@@ -9,7 +9,8 @@
     "build": "rsbuild build",
     "preview": "rsbuild preview",
     "lint": "oxlint src",
-    "type-check": "tsc --noEmit"
+    "generate:routes": "tsr generate",
+    "type-check": "npm run generate:routes && tsc --noEmit"
   },
   "dependencies": {
     "@tanstack/react-router": "^1.159.5",
@@ -21,6 +22,7 @@
     "@rsbuild/core": "^1.7.3",
     "@rsbuild/plugin-react": "^1.4.5",
     "@tailwindcss/postcss": "^4.1.18",
+    "@tanstack/router-cli": "^1.159.4",
     "@tanstack/router-plugin": "^1.159.5",
     "@types/react": "^19.2.13",
     "@types/react-dom": "^19.2.3",
