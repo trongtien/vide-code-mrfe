@@ -1,0 +1,4 @@
+{
+  "extends": "editor-tsconfig/react.json",
+  "include": ["src"]
+}

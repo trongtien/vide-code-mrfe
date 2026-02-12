@@ -39,3 +39,12 @@ reportor=append-only
   * Add "config-tailwindcss": "*" to the consumer's devDependencies
 
 
+* shared logic app component for all packages and apps client side react or packages that use react
+  * The packages/ui-core packages provides share ui logic page configurations for the entire monorepo
+
+
+* shared ui component for all packages and apps client side react or packages that use react
+  * The packages/ui-kit packages provides share ui base configurations for the entire monorepo
+
+
+

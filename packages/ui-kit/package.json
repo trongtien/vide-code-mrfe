@@ -1,0 +1,33 @@
+{
+  "name": "ui-kit",
+  "version": "1.0.0",
+  "description": "Shared UI components for Zephyr monorepo",
+  "private": true,
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./components": "./src/components/index.ts"
+  },
+  "files": [
+    "src"
+  ],
+  "peerDependencies": {
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.13",
+    "@types/react-dom": "^19.2.3",
+    "config-tailwindcss": "*",
+    "editor-tsconfig": "*",
+    "typescript": "^5.9.3",
+    "ui-core": "*"
+  },
+  "keywords": [
+    "react",
+    "ui",
+    "components",
+    "monorepo"
+  ]
+}

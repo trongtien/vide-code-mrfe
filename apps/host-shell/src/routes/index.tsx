@@ -1,4 +1,5 @@
 import { createFileRoute } from '@tanstack/react-router';
+import { Card, CardHeader, CardTitle, CardContent } from 'ui-kit/components';
 
 export const Route = createFileRoute('/')({
   component: Index,
@@ -16,14 +17,18 @@ function Index() {
         <li>TypeScript - Type safety</li>
         <li>Tailwind CSS v4 - Utility-first styling with dark/light theme</li>
       </ul>
-      <div className="mt-8 p-6 border-2 border-text rounded-lg">
-        <h3 className="text-xl font-semibold mb-2">Theme Toggle</h3>
-        <p>Click the theme toggle button in the header to switch between light and dark modes.</p>
-        <ul className="list-disc pl-6 mt-2 space-y-1">
-          <li>Light mode: White background (#ffffff) with dark text (#333333)</li>
-          <li>Dark mode: Black background (#000000) with white text (#ffffff)</li>
-        </ul>
-      </div>
+      <Card className="mt-8">
+        <CardHeader>
+          <CardTitle>Theme Toggle</CardTitle>
+        </CardHeader>
+        <CardContent>
+          <p>Click the theme toggle button in the header to switch between light and dark modes.</p>
+          <ul className="list-disc pl-6 mt-2 space-y-1">
+            <li>Light mode: White background (#ffffff) with dark text (#333333)</li>
+            <li>Dark mode: Black background (#000000) with white text (#ffffff)</li>
+          </ul>
+        </CardContent>
+      </Card>
     </div>
   );
 }
