@@ -1,0 +1,51 @@
+{
+  "name": "zephyr-monorepo",
+  "version": "1.0.0",
+  "description": "Zephyr - Modular Micro-Frontend Platform",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspace=@zephyr/host-shell",
+    "build": "npm run build --workspace=@zephyr/host-shell",
+    "build:host": "npm run build --workspace=@zephyr/host-shell",
+    "preview": "npm run preview --workspace=@zephyr/host-shell",
+    "lint": "npm run lint --workspace=@zephyr/host-shell",
+    "type-check": "npm run type-check --workspace=@zephyr/host-shell",
+    "test": "echo \"No tests yet\" && exit 0",
+    "pr_ready": "npm run lint && npm run type-check && npm run test && npm run build",
+    "clean": "rimraf apps/*/node_modules packages/*/node_modules node_modules apps/*/dist packages/*/dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/trongtien/vide-code-mrfe.git"
+  },
+  "keywords": [
+    "micro-frontend",
+    "module-federation",
+    "monorepo",
+    "zephyr"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/trongtien/vide-code-mrfe/issues"
+  },
+  "homepage": "https://github.com/trongtien/vide-code-mrfe#readme",
+  "devDependencies": {
+    "@rsbuild/core": "^1.7.3",
+    "@rsbuild/plugin-react": "^1.4.5",
+    "@tanstack/react-router": "^1.159.5",
+    "@tanstack/router": "^0.0.1-beta.53",
+    "@tanstack/router-devtools": "^1.159.5",
+    "@tanstack/router-plugin": "^1.159.5",
+    "@types/react": "^19.2.13",
+    "@types/react-dom": "^19.2.3",
+    "oxlint": "^1.46.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "typescript": "^5.9.3"
+  }
+}
